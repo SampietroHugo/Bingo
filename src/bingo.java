@@ -10,17 +10,15 @@ public class bingo {
 
         for (int i = 0; i < cartela.length; i++) {
             for (int j = 0; j < cartela.length; j++) {
-                cartela[i][j] = random.nextInt(10, 99);
-                System.out.print(cartela[i][j] + " ");
+                cartela[i][j] = random.nextInt(10, 50);
             }
-            System.out.println();
         }
 
         for (int i = 0; i < cartela.length; i++) {
             for (int j = 0; j < cartela[i].length; j++) {
                 do {
                     System.out.println();
-                    System.out.print("Digite um número de 1 a 99 para o bingo: ");
+                    System.out.print("Digite um número de 10 a 50 para o bingo: ");
                     resposta = input.nextInt();
                 } while (resposta < 10 || resposta > 99);
 
@@ -44,9 +42,9 @@ public class bingo {
                 for (int x = 0; x < cartela.length; x++) {
                     for (int y = 0; y < cartela[x].length; y++) {
                         if(cartela[x][y] == 0){
-                            System.out.print(" X ");
+                            System.out.print(resposta + "\t");
                         }else{
-                            System.out.print(cartela[x][y] + " ");
+                            System.out.print( "X\t");
                         }
                     }
                     System.out.println();
