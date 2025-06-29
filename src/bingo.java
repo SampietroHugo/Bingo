@@ -2,6 +2,8 @@ import java.util.*;
 
 public class bingo {
     public static Scanner input = new Scanner(System.in);
+    final static String Green = "\u001B[32m";
+    final static String Reset = "\u001B[0m";
 
     public static void main(String[] args) {
         int resposta;
@@ -42,7 +44,7 @@ public class bingo {
             for (int i = 0; i < cartelaOculta.length; i++) {
                 for (int j = 0; j < cartelaOculta[i].length; j++) {
                     if (cartelaOculta[i][j] != 0) {
-                        System.out.print(cartelaOculta[i][j] + "\t");
+                        System.out.print(Green + cartelaOculta[i][j] + "\t" + Reset);
                     } else {
                         System.out.print("X\t");
                     }
